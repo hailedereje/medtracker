@@ -1,9 +1,13 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Business from "./pages/Business";
 function App() {
   return (
     <div className="App">
-      <h1 className = "text-red-500">
-        hugjrkfh
-      </h1>
+      <BrowserRouter>
+        <Routes>
+          <Route path="business" element={Business}/>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
