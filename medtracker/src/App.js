@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Footer from "./components/Footer";
+import Footer from "./Components/Footer";
 import Business from "./pages/Business";
 function App() {
   return (
