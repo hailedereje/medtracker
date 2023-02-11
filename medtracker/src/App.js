@@ -1,6 +1,4 @@
 import {BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Business from "./pages/Business";
-import News from "./pages/News";
 import Order from "./Components/Order";
 import Services from "./Components/Services";
 import Navbar from "./Components/Navbar";
@@ -9,6 +7,9 @@ import HeroCard from "./Components/HeroCard";
 import Hero from "./Components/Hero";
 import Profile from "./pages/Profile";
 import Popup from "./pages/Popup";
+import News from "./pages/News";
+import Business from "./pages/Business";
+
 
 
 
