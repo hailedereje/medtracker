@@ -9,8 +9,8 @@ const News = () => {
             <h1>Latest News & Articles</h1>
         </div>
         <div className='flex gap-10 justify-center items-center'>
-            {news.map(nw => (
-                <div>
+            {news.map((nw,indx) => (
+                <div key={indx}>
                     <img src={nw.image} alt=""/>
                     <h1 className='text-center'>{nw.title}</h1>
                     <p>Read More  </p>

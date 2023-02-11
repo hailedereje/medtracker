@@ -2,8 +2,6 @@ import React from "react";
 import img1 from "../assets/business1.png";
 import img2 from "../assets/business2.png";
 import img3 from "../assets/business3.png";
-
-import img4 from "../assets/business4.png";
 import img5 from "../assets/business5-bg.png";
 import img6 from "../assets/b5.png";
 
