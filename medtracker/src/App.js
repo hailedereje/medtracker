@@ -10,17 +10,11 @@ import Business from "./pages/Business";
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <Hero />
-      <HeroCard/>
-      <Order/>
-      <Services/>
-      <News/>
-      {/* <BrowserRouter>
+      <BrowserRouter>
         <Routes>
           <Route path="/" element={<Navbar/>}/>
         </Routes>
-      </BrowserRouter> */}
+      </BrowserRouter>
     </div>
   );
 }
