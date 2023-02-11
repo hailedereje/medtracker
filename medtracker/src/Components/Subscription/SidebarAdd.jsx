@@ -13,8 +13,8 @@ const SidebarAdd = ({ side, setSide }) => {
             <form className='w-full'>
                 <input type="file" className='border border-black/30 p-[20px] rounded-md mt-5 w-full'placeholder='Document title'/>
                 <input className='border border-black/30 p-[20px] rounded-md mt-5 w-full' placeholder='Document title'/>
-                <select className='border border-black/30 p-[20px] rounded-md mt-5 w-full bg-white items-center ' placeholder='Document-type'>
-                    <option classname="text-[#263238]">Document Type</option>
+                <select  className='border text-[#263238] border-black/30 p-[20px] rounded-md  bg-white mt-5 w-full bg-white items-center ' placeholder='Document-type'>
+                    <option classname="text-black-500">Document Type</option>
                     <option className='my-2'>Certificate</option>
                     <option className='my-2'>Discharge Summary</option>
                     <option className='my-2'>Insurance</option>

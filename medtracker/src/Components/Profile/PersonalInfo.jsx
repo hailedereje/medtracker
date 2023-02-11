@@ -33,7 +33,7 @@ function PersonalInfo() {
                 />
                 <select
                   type="date"
-                  className="flex-2 rounded border-black p-2 m-2  border focus:outline-none focus:border-sky-500"
+                  className="flex-2 rounded   bg-white border-black p-2 m-2  border focus:outline-none focus:border-sky-500"
                   placeholder="gender"
                 >
                   <option value="">Gender</option>
@@ -51,7 +51,8 @@ function PersonalInfo() {
                 id="nationality"
                 name="nationality"
                 class="form-control"
-                className="rounded border-black p-2 m-2 w-full border focus:outline-none focus:border-sky-500"
+              
+                className="rounded border-black bg-white p-2 m-2 w-full border focus:outline-none focus:border-sky-500"
               >
                 <option value="">select Nationality </option>
 
@@ -370,7 +371,7 @@ function PersonalInfo() {
               <select
                 type="text"
                 name="donate"
-                className="rounded border-black p-2 m-2 w-full border focus:outline-none focus:border-sky-500"
+                className="rounded   bg-white border-black p-2 m-2 w-full border focus:outline-none focus:border-sky-500"
                 placeholder="Answer"
               >
                 <option value="yes">Yes</option>

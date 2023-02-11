@@ -8,20 +8,22 @@ import Document from './Document'
 import SidebarAdd from './SidebarAdd'
 import { useState } from 'react'
 import ordercard from "../../assets/order-card.png"
+import Popup from '../Popup'
 
 
 const Subscription = () => {
     const [side,setSide] = useState(false)
-    console.log(side)
+    const [profile,setProfile] = useState(false)
   return (
     <div className='bg-[#daf2f8] flex justify-center items-center py-[2rem]'>
         {side && <SidebarAdd side = { side } setSide={setSide}/>}
+        {profile && <Popup setProfile={setProfile}/>}
         <div className='w-[900px] m-auto'>
             <h1 className='text-2xl'>👋🏻 Good morning apphuset runar</h1>
             <div className='bg-white rounded-[20px] w-full p-[20px] my-[1rem]'>
                 <h1 className='text-2xl'>apphuset runar</h1>         
                 <p className='text-black/50 my-1'>Member since 2022</p>
-                <Link to="/profile" className='text-black/50'>(Click to edit you profile)</Link>
+                <button to="/profile" className='text-black/50 bg-white' onClick={() => setProfile(true)}>(Click to edit you profile)</button>
             </div>
             
             <div className='my-[2rem]'>

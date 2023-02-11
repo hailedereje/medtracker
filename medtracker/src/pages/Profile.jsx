@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import EmergencyContact from "../Components/Profile/EmergencyContact";
 import PersonalInfo from "../Components/Profile/PersonalInfo";
 import PostalAddress from "../Components/Profile/PostalAddress";
@@ -20,9 +21,9 @@ function Profile() {
 
         <div className="flex float-right">
           <div>
-            <button className="rounded-lg px-10 py-1 border border-[#4dd7f9] text-[#4dd7f9]">
+            <Link to="/sub" className="rounded-lg px-10 py-1 border border-[#4dd7f9] text-[#4dd7f9]">
               Cancel
-            </button>
+            </Link>
           </div>
           <div className="ml-3">
             <button className="rounded-lg px-10 py-1 border border-[#4dd7f9] bg-[#4dd7f9] text-[white]">

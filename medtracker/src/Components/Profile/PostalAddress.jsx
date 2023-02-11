@@ -25,7 +25,7 @@ function PostalAddress() {
         id="country"
         name="Country"
         class="form-control"
-        className="rounded border-black p-2 m-2 w-full border focus:outline-none focus:border-sky-500"
+        className="rounded   bg-white border-black p-2 m-2 w-full border focus:outline-none focus:border-sky-500"
       >
         <option value="">Country</option>
         <option value="Afghanistan">Afghanistan</option>
