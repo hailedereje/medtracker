@@ -1,8 +1,8 @@
 import React from "react";
 
-import TopBusiness from "../Components/BusinessTop";
-import BusinessMiddle from "../Components/BusinessMiddle";
-import BusinessBottom from "../Components/BusinessBottom";
+import TopBusiness from "../Components/Business/BusinessTop";
+import BusinessMiddle from "../Components/Business/BusinessMiddle";
+import BusinessBottom from "../Components/Business/BusinessBottom";
 
 function Business() {
   return (
