@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-.orders {
-    white-space: 2;
-}
+
+select:invalid {
+    color: green;
+  }
