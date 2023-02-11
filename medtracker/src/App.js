@@ -1,13 +1,26 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Hero from "./Components/Hero";
+import HeroCard from "./Components/HeroCard";
+import Navbar from "./Components/Navbar";
+import News from "./Components/News";
+import Order from "./Components/Order";
+import Services from "./Components/Services";
 import Business from "./pages/Business";
+
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <Navbar />
+      <Hero />
+      <HeroCard/>
+      <Order/>
+      <Services/>
+      <News/>
+      {/* <BrowserRouter>
         <Routes>
-          <Route path="business" element={Business}/>
+          <Route path="/" element={<Navbar/>}/>
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
     </div>
   );
 }
