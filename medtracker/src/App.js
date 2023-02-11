@@ -4,7 +4,7 @@ import News from "./Components/Home/News";
 import Order from "./Components/Home/Order";
 import Services from "./Components/Home/Services";
 import Navbar from "./Components/Navbar";
-import Footer from "./Components/Footer";
+import Footer from "./Compoentire website and any email or other type of communication between you and World Medical Card.nents/Footer";
 import HeroCard from "./Components/Home/HeroCard";
 import Hero from "./Components/Home/Hero";
 import Subscription from "./Components/Subscription/Subscription";
