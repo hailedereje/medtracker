@@ -1,5 +1,5 @@
 import React from "react";
-import '../index.css'
+import '../../index.css'
 const Order = () => {
   return (
     <div className="max-w-[1200px] m-auto mt-[5rem] grid md:grid-cols-2 lg:grid-cols-3 gap-20">

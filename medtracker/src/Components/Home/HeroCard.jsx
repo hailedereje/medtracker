@@ -1,5 +1,5 @@
 import React from 'react'
-import medcard from '../assets/home/medcard.png'
+import medcard from '../../assets/home/medcard.png'
 import { FiEdit } from 'react-icons/fi'
 import { ImProfile } from 'react-icons/im'
 

@@ -1,12 +1,17 @@
 import {BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Business from "./pages/Business";
-import News from "./Components/News";
-import Order from "./Components/Order";
-import Services from "./Components/Services";
+import News from "./Components/Home/News";
+import Order from "./Components/Home/Order";
+import Services from "./Components/Home/Services";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
-import HeroCard from "./Components/HeroCard";
-import Hero from "./Components/Hero";
+import HeroCard from "./Components/Home/HeroCard";
+import Hero from "./Components/Home/Hero";
+import Subscription from "./Components/Subscription/Subscription";
+import HelloLogin from "./Components/Login/Login";
+import LoginLogo from "./Components/Login/LoginLogo";
+import Login from "./Components/Login/intropage";
+import Terms from "./Components/Login/Terms";
 
 function App() {
   return (
@@ -26,7 +31,11 @@ function App() {
             </>
           }
         />
-        <Route path="/bussiness" element={<Business />} />
+        <Route path="/login" element={<HelloLogin/>} />
+        <Route path="/terms" element={<Terms/>} />
+        <Route path="/loginintro" element={<Login/>} />
+        <Route path="/business" element={<Business />} />
+        <Route path="/sub" element={<Subscription />} />
       </Routes>
       <Footer />
     </Router>

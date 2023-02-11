@@ -1,5 +1,5 @@
 import React from 'react'
-import { serviceImages, services } from '../data'
+import { serviceImages, services } from '../../data'
 
 const Services = () => {
   return (
@@ -7,8 +7,8 @@ const Services = () => {
          <div className='p-20'>
          <div className='flex justify-center  gap-20'> 
             {services.map((service) => (
-                <div className='font-sans'>
-                    <h1 className='text-center mb-5 text-white'>{service.icon}</h1>
+                <div className='font-sans flex flex-col  items-center'>
+                    <h1 className='text-center mb-5 text-white text-5xl'>{service.icon}</h1>
                     <h1 className='text-center mb-5 text-white text-2xl'> {service.title}</h1>
                     <p className='text-center mb-5 text-white'>{service.p1}</p>
                     <p className='text-center mb-5 text-white'>{service.p2}</p>
