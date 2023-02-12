@@ -188,7 +188,7 @@ function About(params) {
                     </div>
                 </div>
                 <div className='ml-5'>
-                    <h1 className='font-bold text-6xl mb-10 '>Security & Privacy Regulation</h1>
+                    <h1 className='font-bold text-6xl mb-10 pt-10'>Security & Privacy Regulation</h1>
                     <p className='mb-5'>
                         WMC Technologies provides our customers with the highest level of security available 
                         for online data storage, including personal information and transactions. 
