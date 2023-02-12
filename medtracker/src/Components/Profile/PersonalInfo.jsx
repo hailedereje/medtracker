@@ -1,5 +1,4 @@
 import React from 'react'
-import {useFormik} from 'formik';
 function PersonalInfo() {
   return (
 <div className="flex-1">
@@ -8,7 +7,7 @@ function PersonalInfo() {
               Please fill your personal information to create an account you can
               change them later
             </p>
-            <form action="">
+            <form >
               <input
                 required
                 type="text"

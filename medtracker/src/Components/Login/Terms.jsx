@@ -8,9 +8,9 @@ export default function Terms() {
       <div className="overflow-y-auto w-[600px] h-[600px] mx-auto mb-6 flex flex-col bg-white rounded-l-3xl">
         <div className="m-3">
           <h3 className="text-gray-400 text-l">
-            <a href="">
+            <Link to="/loginintro">
               <span className="font-bold text-xl">&larr;</span> &nbsp;BACK
-            </a>
+            </Link>
           </h3>
         </div>
 

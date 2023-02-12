@@ -5,7 +5,7 @@ import nf3 from './assets/home/nf4.png'
 import nf4 from './assets/home/nf5.png'
 import {MdOutlineChildCare} from 'react-icons/md'
 import {GiGlassHeart} from 'react-icons/gi'
-import {FaDungeon,FaDumbbell,FaAirbnb} from 'react-icons/fa'
+import {FaDumbbell,FaAirbnb} from 'react-icons/fa'
 import heart from './assets/home/heart.png'
 import influenza from './assets/home/influenza.png'
 import medica from './assets/home/medication.jpg'
@@ -20,7 +20,7 @@ export const navbar = [
     },
     {
         name:"PROFESSIONALS",
-        link:"/professinal"
+        link:"/professional"
     },
     {
         name:"ABOUT",

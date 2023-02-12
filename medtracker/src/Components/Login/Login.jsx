@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from "../../assets/logo.png"
+// import logo from "../../assets/logo.png"
 // import cover from './cover.png'
 import { FaApple } from "react-icons/fa";
 import {FcGoogle} from "react-icons/fc"
@@ -28,7 +28,7 @@ export default function HelloLogin() {
         </form>
 
         <div className="flex flex-row justify-center">
-            <a href="" className='underline '>Forgot Password?</a>
+            <Link to="" className='underline '>Forgot Password?</Link>
         </div>
         <div className="flex flex-row items-center justify-start mt-4 mb-4 gap-3">
             <div className='w-[40%]'>
