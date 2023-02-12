@@ -211,7 +211,7 @@ function About(params) {
                 </div>
                 <div className="flex-1 m-auto ">
                     <button className="bg-[#a81515]  text-white p-3 item-center rounded-md">
-                    Watch Video
+                    Watch Video &nbsp;
                     </button>
                 </div>
                 <div className="flex-1">
