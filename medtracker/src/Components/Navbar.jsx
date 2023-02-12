@@ -12,7 +12,7 @@ const Navbar = () => {
         </div>
         <div className="flex ml-[2rem]">
           {navbar.map((nav) => (
-            <Link to={nav.link} className="ml-[2rem] font-sans-serif text-[15px]">
+            <Link to={nav.link} className="ml-[2rem] font-sans-serif text-[15px] font-mono">
               {nav.name}
             </Link>
           ))}

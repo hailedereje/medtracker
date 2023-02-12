@@ -1,18 +1,27 @@
-import React from "react";
 import { useState } from "react";
 import { FaAllergies } from "react-icons/fa";
+import { useDispatch, useSelector } from "react-redux";
+
 import {
   AiOutlineDown,
   AiOutlineUp,
   AiOutlineTranslation,
 } from "react-icons/ai";
+
 import { IoAddSharp } from "react-icons/io5";
 import { HiShare } from "react-icons/hi";
 import { MdDelete } from "react-icons/md";
+import { useEffect } from "react";
+import { allergies } from "../../features/actions/actions";
 
 export const Allergies = () => {
+  const aleergy = useSelector(state => state.allergyReducer.allergies)
   const [show, setShow] = useState(false);
+  const dispatch = useDispatch()
 
+  useEffect(() => {
+    dispatch(allergies())
+  })
   return (
     <div className={`bg-white p-[10px] rounded-[20px] cursor-pointer`}>
       <div

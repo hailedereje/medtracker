@@ -1,12 +1,19 @@
 import React from 'react'
 // import logo from "../../assets/logo.png"
 // import cover from './cover.png'
+import { useDispatch, useSelector } from "react-redux";
 import { FaApple } from "react-icons/fa";
 import {FcGoogle} from "react-icons/fc"
 import LoginLogo from './LoginLogo';
 import { Link } from 'react-router-dom';
 
 export default function HelloLogin() {
+    const  dispatch = useDispatch()
+    // const user = {
+    //     id:1,
+    //     name:"hello"
+    // }
+    // dispatch(userLogin(user))
   return (
     <div className='bg-blue-100 w-[100%] h-[100%] '>
         <LoginLogo/>
