@@ -5,7 +5,7 @@ import img3 from "../assets/b5.png"
 
 function Professionals(params) {
     return(
-        <div className="">
+        <div className="mt-20">
             <div className="text-center">
                 <p className="font-bold text-3xl mb-5">
                     How The World Medical Card® can be used by 
@@ -72,7 +72,7 @@ function Professionals(params) {
                     </p>
                 </div>
             </div>
-            <div className="flex mt-20 bg-[#c0bdbd]">
+            <div className="flex mt-20 bg-[#FFF7F1]">
                 <div className="flex-1 my-auto text-xl font-[400]">
                     Learn More About The World Medical Card® And How To Use It
                 </div>

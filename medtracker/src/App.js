@@ -12,6 +12,7 @@ import NewsPage from "./pages/News";
 import Home from "./pages/Home";
 import Professionals from "./pages/Professionals";
 import About from "./pages/About";
+import FAQ from "./pages/Faq";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path="/profile" element={<Profile />} />
         <Route path="/pop" element={<Popup />} />
         <Route path="/news" element={<NewsPage />} />
+        <Route path="/faq" element={<FAQ />} />
       </Routes>
       <Footer />
     </Router>

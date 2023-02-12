@@ -31,8 +31,8 @@ export const navbar = [
         link:"/news"
     },
     {
-        name:"FAG",
-        link:"/fag"
+        name:"FAQ",
+        link:"/faq"
     },
 ]
 

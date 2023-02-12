@@ -31,7 +31,7 @@ export default function HelloLogin() {
         <form action="">
             <input type="text" className='w-[90%] border p-3 border-gray-600 mb-6 rounded-xl focus:border-green-400' placeholder='Password'/>
             <input type="text" className='w-[90%] border p-3 border-gray-600 rounded-xl mb-6' placeholder='Email'/>
-            <input type="submit" className='w-[90%] p-3 bg-blue-500 rounded-xl mb-6 hover:cursor-pointer' value="Continue"/>
+            <input type="submit" className='w-[90%] p-3 bg-[#0292b3] rounded-xl text-white mb-6 hover:cursor-pointer' value="Continue"/>
         </form>
 
         <div className="flex flex-row justify-center">
