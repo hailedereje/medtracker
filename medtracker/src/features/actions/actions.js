@@ -2,6 +2,12 @@ import * as type from '../types'
 
 
 
+export const userLogin = (user) => {
+    return {
+        type:type.USER_LOGIN,
+        payload:user
+    }
+}
 
 ///allergees
 export const allergies = () => {

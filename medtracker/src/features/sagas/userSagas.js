@@ -3,23 +3,25 @@ import axios from 'axios'
 
 const apiUrl = 'http://localhost:8800/api/'
 
-const createUser = async (user) => {
-    const response = await axios.post(apiUrl + "register",user)
-    return response.data
-}
+// const createUser = async (user) => {
+//     const response = await axios.post(apiUrl + "register",user)
+//     return response.data
+// }
+
 const login = async (user) => {
+    console.log(user,"saga")
     const response = await axios.post(apiUrl + "login",user)
     return response.data
 }
 
-function* createNewUser({payload}) {
-    try {
-        const user =  yield call(createUser,payload)
-        yield put({type: "CREATE_USER_SUCCESS",user:user})
-    } catch (error) {
-        yield put({ type: "CREATE_USER_FAILED",message:error.message})
-    }
-}
+// function* createNewUser({payload}) {
+//     try {
+//         const user =  yield call(createUser,payload)
+//         yield put({type: "CREATE_USER_SUCCESS",user:user})
+//     } catch (error) {
+//         yield put({ type: "CREATE_USER_FAILED",message:error.message})
+//     }
+// }
 
 function* userLogin({payload}) {
     try {
@@ -31,7 +33,7 @@ function* userLogin({payload}) {
 }
 
 function* userSaga() {
-   yield takeEvery("CREATE_USER",createNewUser)
+//    yield takeEvery("CREATE_USER",createNewUser)
    yield takeEvery("USER_LOGIN",userLogin)
 }
 

@@ -9,10 +9,10 @@ const getAllegry = async () => {
    return response.data
 }
 
-// const deleteAllerg = async (id) => {
-//     const response = await axios.delete(apiUrl+ `delete/${id}`)
-//     return id
-// }
+const deleteAllerg = async (id) => {
+    const response = await axios.delete(apiUrl+ `delete/${id}`)
+    return id
+}
 
 
 function* fetchAllergies() {
