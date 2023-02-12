@@ -1,6 +1,7 @@
 import React from 'react'
 import {colum1} from '../Components/faq/Data'
 import SingleQuestion from '../Components/faq/SingleQuestion'
+import img from '../assets/b5.png'
 
 export default function Faq() {
     const valuesFirstColumn = colum1.map((col) =>{
@@ -34,7 +35,7 @@ export default function Faq() {
                     </button>
                 </div>
                 <div className="flex-1">
-                    <img className="mt-[-100px]" src={img7} alt="" />
+                    <img className="mt-[-100px]" src={img} alt="" />
                 </div>
             </div>
 
