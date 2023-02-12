@@ -3,9 +3,9 @@ import img1 from "../assets/about/about1.png"
 import img2 from "../assets/about/about2.png"
 import img3 from "../assets/about/about3.jpg"
 import img4 from "../assets/about/about4.jpg"
-import img5 from "../assets/about/about5.jpg"
 import img6 from "../assets/about/about6.png"
 import img7 from "../assets/b5.png"
+import '../index.css'
 
 function About(params) {
     return(
@@ -165,7 +165,7 @@ function About(params) {
                     </div>
                 </div>
             </div>
-            <div className="pt-40 pb-40">
+            <div className="pt-40 pb-40 about mb-40">
                 <div className='text-center sm:text-left sm:ml-3 text-4xl font-bold'>
                     <h1>A Common Problem With Medical Treatment</h1>
                     <p className='text-2xl font-semibold mt-10'>

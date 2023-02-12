@@ -6,3 +6,6 @@
 select:invalid {
     color: green;
   }
+.about{
+  background: url("./assets/about/about5.jpg");
+}
