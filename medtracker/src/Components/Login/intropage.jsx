@@ -25,8 +25,8 @@ export default function Login() {
                 </div>
 
                 <Link to='/terms'>
-                    <button className="bg-blue-600 rounded-full w-[20rem] mt-[15%] mb-5">
-                        <h2 className=' text-white text-xl text-center p-3'>login</h2>
+                    <button className="bg-[#0292b3] rounded-full w-[60%] mt-[15%] mb-5">
+                    <h2 className=' text-white text-xl text-center p-3'>LOG IN</h2>
                     </button>
                 </Link>
        </div>
