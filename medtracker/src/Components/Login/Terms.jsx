@@ -188,10 +188,10 @@ export default function Terms() {
         </div>
 
         <div className="flex flex-row justify-center gap-10 mt-10 mb-5">
-          <button className="rounded-full bg-gray-500 w-1/3">
+          <button className="rounded-full bg-[#718096] w-1/3">
             <p className="text-xl text-white p-2">DECLINE</p>
           </button>
-          <Link to="/login" className="rounded-full bg-blue-500 w-1/3 flex justify-center items-center text-white">
+          <Link to="/login" className="rounded-full bg-[#4299e1] w-1/3 flex justify-center items-center text-white">
             ACCEPT
           </Link>
         </div>
