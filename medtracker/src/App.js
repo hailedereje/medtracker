@@ -13,6 +13,7 @@ import Home from "./pages/Home";
 import Professionals from "./pages/Professionals";
 import About from "./pages/About";
 import FAQ from "./pages/Faq";
+import Register from "./Components/Register";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/login" element={<HelloLogin />} />
         <Route path="/terms" element={<Terms />} />
         <Route path="/loginintro" element={<Login />} />
+        <Route path="/signup" element={<Register/>}/>
         <Route path="/sub" element={<Subscription />} />
         <Route path="/business" element={<Business />} />
         <Route path="/professional" element={<Professionals/>}/>

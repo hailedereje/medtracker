@@ -13,15 +13,16 @@ import { HiShare } from "react-icons/hi";
 import { MdDelete } from "react-icons/md";
 import { useEffect } from "react";
 import { allergies } from "../../features/actions/actions";
+import Allpop from "./Allpop";
 
-export const Allergies = () => {
-  const aleergy = useSelector(state => state.allergyReducer.allergies)
+export const Allergies = ({ setAlergy }) => {
+  const aleergy = useSelector((state) => state.allergyReducer.allergies);
   const [show, setShow] = useState(false);
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(allergies())
-  })
+    dispatch(allergies());
+  });
   return (
     <div className={`bg-white p-[10px] rounded-[20px] cursor-pointer`}>
       <div
@@ -30,7 +31,7 @@ export const Allergies = () => {
       >
         <div className="flex items-center cursor-pointer">
           <div className="mr-[3rem]">
-            <FaAllergies size={40} className="text-black/30"/>
+            <FaAllergies size={40} className="text-black/30" />
           </div>
           <div>
             <h1 className="text-xl">Allergies</h1>
@@ -38,7 +39,11 @@ export const Allergies = () => {
           </div>
         </div>
         <div className="flex items-center">
-          {show ? <AiOutlineUp size={20} className="text-black/30"/> : <AiOutlineDown size={20} className="text-black/30"/>}
+          {show ? (
+            <AiOutlineUp size={20} className="text-black/30" />
+          ) : (
+            <AiOutlineDown size={20} className="text-black/30" />
+          )}
         </div>
       </div>
 
@@ -47,23 +52,35 @@ export const Allergies = () => {
           show ? "h-[100%] transition-transform" : "hidden transition-transform"
         }`}
       >
-        <hr className="w-[95%] text-center m-auto"/>
-        <div className="flex justify-between items-center mx-[1rem] mt-4 hover:bg-black/10 rounded-md cursor-pointer px-2">
-          <p className="my-4 px-[1rem]">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          <MdDelete size={20} className="hover:hidden"/>
+        <hr className="w-[95%] text-center m-auto" />
+        <div className="flex justify-between items-center mx-[1rem]  hover:bg-black/10 rounded-md cursor-pointer px-2">
+          <p className="my-2 px-[1rem] text-black/50">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </p>
+          <MdDelete size={20} className="hover:hidden" />
         </div>
-
+        {aleergy.map((alergy) => (
+          <div className="flex justify-between items-center mx-[1rem] hover:bg-black/10 rounded-md cursor-pointer px-2" key={alergy.id}>
+            <p className="my-2 px-[1rem] text-black/50">
+              {alergy.title}
+            </p>
+            <MdDelete size={20} className="hover:hidden" />
+          </div>
+        ))}
       </div>
       <div className={`flex mt-2 ml-4 ${!show && "hidden"}`}>
-        <button className="ml-4 border p-[10px] rounded-[20px] flex items-center">
+        <button
+          className="ml-4 border p-[10px] rounded-[20px] flex items-center"
+          onClick={() => setAlergy(true)}
+        >
           <IoAddSharp className="mr-2" /> Add
         </button>
         <button className="ml-4 border p-[10px] rounded-[20px] flex items-center">
-          <AiOutlineTranslation className="mr-3"/> Translation
+          <AiOutlineTranslation className="mr-3" /> Translation
         </button>
         <button className="ml-4 border p-[10px] rounded-[20px] flex items-center">
           {" "}
-          <HiShare className="mr-3"/> share
+          <HiShare className="mr-3" /> share
         </button>
       </div>
     </div>

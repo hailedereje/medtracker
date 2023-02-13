@@ -16,6 +16,13 @@ export const allergies = () => {
     }
 }
 
+export const addAllergies = ( allergy) => {
+    return {
+        type:type.ADD_ALLERGIES,
+        payload:allergy
+    }
+}
+
 export const deleteAllergy = (id) => {
     return {
         type: type.DELETE_ALLERGIES,
@@ -23,6 +30,26 @@ export const deleteAllergy = (id) => {
     }
 }
 
+
+export const createDocument = ( document ) => {
+    return {
+        type:type.ADD_DOCUMENT,
+        payload:document
+    }
+}
+
+export const getDocument = () => {
+    return {
+        type:type.GET_DOCUMENT
+    }
+}
+
+export const deleteDocument = (id) => {
+    return {
+        type: type.DELETE_DOCUMENT,
+        payload:id
+    }
+}
 
 
 ///////diagnosis
