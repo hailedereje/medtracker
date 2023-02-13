@@ -11,7 +11,7 @@ import { IoAddSharp,IoDocumentText } from "react-icons/io5";
 import { HiOutlineEye} from "react-icons/hi";
 import { MdDelete, MdModeEditOutline } from "react-icons/md";
 
-const Document = ( { setSide }) => {
+const Document = ( { setSide,setView }) => {
   const [show, setShow] = useState(false);
  
   return (
@@ -55,7 +55,7 @@ const Document = ( { setSide }) => {
               </div>
             </div>
             <div className="flex">
-              <HiOutlineEye className="ml-2 text-black/40"/>
+              <HiOutlineEye className="ml-2 text-black/40" onClick={() => setView(true)}/>
               <MdModeEditOutline className="ml-2 text-black/40"/>
               <IoMdDownload className="ml-2 text-black/40"/>
               <MdDelete className="ml-2 text-black/40"/>

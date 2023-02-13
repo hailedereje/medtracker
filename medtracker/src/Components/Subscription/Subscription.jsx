@@ -9,15 +9,23 @@ import SidebarAdd from './SidebarAdd'
 import { useState } from 'react'
 import ordercard from "../../assets/order-card.png"
 import Popup from '../Popup'
+import ImageViewer from './ImageViewer'
+import Allpop from './Allpop'
 
 
 const Subscription = () => {
     const [side,setSide] = useState(false)
     const [profile,setProfile] = useState(false)
+    const [view,setView] = useState(false)
+    const [alergy,setAlergy] = useState(false)
+
   return (
     <div className='bg-[#daf2f8] flex justify-center items-center py-[2rem]'>
         {side && <SidebarAdd side = { side } setSide={setSide}/>}
         {profile && <Popup setProfile={setProfile}/>}
+        {view && <ImageViewer  setView = {setView}/>}
+        {alergy &&<Allpop setAlergy={setAlergy}/>}
+
         <div className='w-[900px] m-auto'>
             <h1 className='text-2xl'>👋🏻 Good morning apphuset runar</h1>
             <div className='bg-white rounded-[20px] w-full p-[20px] my-[1rem]'>
@@ -27,7 +35,7 @@ const Subscription = () => {
             </div>
             
             <div className='my-[2rem]'>
-                  <Allergies/>
+                  <Allergies setAlergy={setAlergy}/>
             </div>
             <div className='my-[2rem]'>
                   <Medicine/>
@@ -39,7 +47,7 @@ const Subscription = () => {
                   <Vaccines />
             </div>
             <div className='my-[2rem]'>
-                  <Document setSide={setSide}/>
+                  <Document setSide={setSide} setView={setView}/>
             </div>
             <div className='bg-white rounded-[20px] w-full p-[20px] mt-[5rem] mb-6 flex justify-between'>
                 <div>

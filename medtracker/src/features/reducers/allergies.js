@@ -1,3 +1,4 @@
+import { allergies } from '../actions/actions';
 import * as type from '../types';
 
 const initialState = {
@@ -20,7 +21,7 @@ export default function allergyReducer(state = initialState, action){
         case type.GET_ALLERGIES_SUCCESS:
             return {
               ...state,
-              memories: action.memories,
+              allergies: action.memories,
               loading:false,
               success:true
             }
@@ -31,13 +32,16 @@ export default function allergyReducer(state = initialState, action){
                   loading:false,
                   success:false
                 }
-                
-        case type.DELETE_ALLERGIES_SUCCESS:
-            console.log(action.id)
-            return {
-                ...state,
-                memories: state.memories.filter(memory => memory._id!==action.id)
-            }
+     
+            case type.ADD_ALLERGIES_SUCCESS:
+                return [...state.allergies, action.allergy]
+                    
+            case type.DELETE_ALLERGIES_SUCCESS:
+                console.log(action.id)
+                return {
+                    ...state,
+                    memories: state.memories.filter(memory => memory._id!==action.id)
+                }
         default:
             return state
     }

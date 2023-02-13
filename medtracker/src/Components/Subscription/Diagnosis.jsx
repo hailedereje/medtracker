@@ -41,11 +41,9 @@ const Diagnosis = () => {
         >
           <hr className="w-[95%] text-center m-auto" />
           <div className="flex justify-between items-center mx-[1rem] mt-4 hover:bg-black/10 rounded-md cursor-pointer px-2">
-            <p className="my-4 px-[1rem]">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </p>
-            <MdDelete size={20} className="hover:hidden" />
-          </div>
+            <p className="my-2 px-[1rem] text-black/50">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <MdDelete size={20} className="hover:hidden" />
+            </div>
         </div>
         <div className={`flex mt-2 ml-4 ${!show && "hidden"}`}>
           <button className="ml-4 border p-[10px] rounded-[20px] flex items-center">

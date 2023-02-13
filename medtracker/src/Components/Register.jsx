@@ -6,17 +6,16 @@ import { useNavigate } from "react-router-dom";
 
 const Register = () => {
   const url = 'http://127.0.0.1:5000/api/auth'
-  const [user,setUser] = useState({username:'', email:'',password:'', phoneNum:''})
+  const [user,setUser] = useState({firstname:'', lastname:"",email:'',password:''})
 
   const navigate = useNavigate()
   const handleSubmit = async(e) => {
     e.preventDefault()
+    console.log(user)
     try {
      await axios.post(`${url}/register`,user);
-     alert("Successfully registered")
      navigate('/login')
     } catch (err) {
-      console.log(err)
       alert("Error registering")
     }
   }
@@ -44,11 +43,9 @@ const Register = () => {
           type="text"
           id="firstname"
           onChange={handleChange}
-          placeholder="user name"
+          placeholder="first name"
         />
          <input
-          data-aos="fade-up"
-          data-aos-delay="600"
           className="mt-10 p-[12px] rounded-[10px] focus:outline-blue-600 text-black"
           type="text"
           id = "lastname"

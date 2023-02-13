@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-// import logo from "../../assets/logo.png"
-// import cover from './cover.png'
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch} from "react-redux";
 import { FaApple } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import LoginLogo from "./LoginLogo";
@@ -16,8 +14,6 @@ export default function HelloLogin() {
     console.log(user)
     e.preventDefault();
     dispatch(userLogin(user));
-
-    // { success && navigate('/')}
   };
 
   const handleChange = (e) => {
@@ -45,6 +41,7 @@ export default function HelloLogin() {
               className="w-[90%] border p-3 border-gray-600 rounded-xl mb-6"
               placeholder="Email"
               id="email"
+              required
               onChange={handleChange}
 
             />
@@ -53,13 +50,14 @@ export default function HelloLogin() {
               className="w-[90%] border p-3 border-gray-600 mb-6 rounded-xl focus:border-green-400"
               placeholder="Password"
               id="password"
+              required
               onChange={handleChange}
             />
-            <input
+            <button
               type="submit"
-              className="w-[90%] p-3 bg-[#0292b3] rounded-xl text-white mb-6 hover:cursor-pointer"
+              className="w-[90%] p-3 bg-[#0292b3] rounded-xl text-white mb-6 hover:cursor-pointer text-xl"
               placeholder="Continue"
-            />
+            >Login</button>
           </form>
 
           <div className="flex flex-row justify-center">
@@ -87,8 +85,9 @@ export default function HelloLogin() {
             </button>
 
             <Link
-              to="/sub"
               className="w-[90%] flex flex-col items-center border p-3 border-green-600 mb-6 rounded-xl focus:border-green-400"
+
+              to="/sub"
             >
               <p className="flex w-1/2 gap-1 flex-row justify-center">
                 <FcGoogle size={25} />

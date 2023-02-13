@@ -7,9 +7,6 @@ const Hero = () => {
     <div 
     style={{ backgroundImage: `url(${hero_image})` }}
     className="flex justify-center items-center h-[700px] ">
-      {/* <div className="w-[100%] absolute h-[700px] ">
-        <img className="w-full h-full object-cover z-[-2]" src={hero_image} alt="hero" />
-      </div> */}
       <div className="w-[1200px] relative flex flex-col justify-start m-auto">
         <div>
           <div className="bg-cyan-500/70 w-[50%] p-3 rounded-md shadow-md ">
