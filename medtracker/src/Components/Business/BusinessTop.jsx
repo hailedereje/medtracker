@@ -4,7 +4,7 @@ import img1 from "../../assets/business1.png";
 
 function TopBusiness() {
   return (
-    <div className="flex  px-7 py-3 ">
+    <div data-testid = "btop" className="flex  px-7 py-3 ">
       <div className="flex-1">
         <img
           className="w-[561px] h-[558px]"

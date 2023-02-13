@@ -3,7 +3,10 @@ import { news } from '../../data'
 
 const News = () => {
   return (
-    <div className='max-w-[1200px] m-auto flex flex-col items-center py-[10rem]'>
+    <div
+    data-testid="news"
+    
+    className='max-w-[1200px] m-auto flex flex-col items-center py-[10rem]'>
         <div className='my-10'>
             <h1 className='text-2xl text-cyan-600 text-center mb-3'>WHAT WE DO</h1>
             <h1 className='text-4xl'>Latest News & Articles</h1>

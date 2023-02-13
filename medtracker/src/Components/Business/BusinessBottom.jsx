@@ -8,7 +8,7 @@ import BusinessGirl from "./BusinessGirl";
 function BusinessBottom() {
   return (
     <>
-      <div className="my-20 flex mx-5">
+      <div data-testid = "bbottom" className="my-20 flex mx-5">
         <div className="flex-1">
           <img src={img3} alt="" />
         </div>

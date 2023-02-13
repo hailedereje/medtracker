@@ -6,7 +6,7 @@ import BusinessBottom from "../Components/Business/BusinessBottom";
 
 function Business() {
   return (
-    <div>
+    <div data-testid = "business">
       <TopBusiness />
       <BusinessMiddle />
       <BusinessBottom />

@@ -2,7 +2,7 @@ import React from "react";
 
 function PostalAddress() {
   return (
-    <div className="flex-1 ml-6">
+    <div data-testid="postal" className="flex-1 ml-6">
       <h1 className='text-[#263238]'>Postal Address </h1>
       <p className='text-[#718096]'>
         Fill the address you want us to send the card to. The address will not

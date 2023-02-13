@@ -4,7 +4,7 @@ export class EmergencyContact extends Component {
   render() {
     return (
 
-      <div className="flex-1 ml-6">
+      <div data-testid="emergence" className="flex-1 ml-6">
             <h1 className='text-[#263238]'> Contact address incase of emergency </h1>
             <p className='text-[#718096]'>Add contacts that you trust in case of an emergency.</p>
             <input
