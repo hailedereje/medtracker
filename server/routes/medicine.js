@@ -1,4 +1,4 @@
-import {addMedicine, deleteMedicine, getMedicine } from '../controllers/allergy.js'
+import {addMedicine, deleteMedicine, getMedicine } from '../controllers/medicine.js'
 
 import express  from "express";
 const router = express.Router()
