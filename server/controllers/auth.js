@@ -9,9 +9,8 @@ export const registerUser = async(req, res) =>{
 
     const newUser = User({
 
-        username:  req.body.username,
+        firstname:  req.body.firstname,
         email:     req.body.email,
-        phoneNum : req.body.phoneNum,
         password:  hashPassword
 
     })
