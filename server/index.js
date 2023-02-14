@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 import express from "express";
 import dotenv from "dotenv";
 
-// import authenticationRoute from './routes/auth.js'
+import authenticationRoute from './routes/auth.js'
 // import usersRoutes from './routes/user.js'
 // import roomsRoutes from './routes/room.js'
 // import foodsRoutes from './routes/food.js'
