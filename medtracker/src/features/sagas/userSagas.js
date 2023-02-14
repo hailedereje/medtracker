@@ -1,27 +1,16 @@
 import {call,put,takeEvery } from 'redux-saga/effects'
 import axios from 'axios'
+import { clientInstance } from './allergySaga'
 
-const apiUrl = 'http://localhost:8800/api/'
 
-// const createUser = async (user) => {
-//     const response = await axios.post(apiUrl + "register",user)
-//     return response.data
-// }
 
 const login = async (user) => {
     console.log(user,"saga")
-    const response = await axios.post(apiUrl + "login",user)
+    const response = await clientInstance.post(user)
     return response.data
 }
 
-// function* createNewUser({payload}) {
-//     try {
-//         const user =  yield call(createUser,payload)
-//         yield put({type: "CREATE_USER_SUCCESS",user:user})
-//     } catch (error) {
-//         yield put({ type: "CREATE_USER_FAILED",message:error.message})
-//     }
-// }
+
 
 function* userLogin({payload}) {
     try {
@@ -33,7 +22,6 @@ function* userLogin({payload}) {
 }
 
 function* userSaga() {
-//    yield takeEvery("CREATE_USER",createNewUser)
    yield takeEvery("USER_LOGIN",userLogin)
 }
 

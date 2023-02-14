@@ -12,7 +12,7 @@ const Allpop = ({ setAlergy }) => {
 
    const handleSubmit = async(e) => {
     e.preventDefault()
-     dispatch(addAllergies({id:1,name:allergy}))
+     dispatch(addAllergies(allergy))
      navigate('/sub')
    }
     return (

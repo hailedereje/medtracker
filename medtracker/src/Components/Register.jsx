@@ -3,17 +3,31 @@ import React from "react";
 import { useState } from "react";
 import axios from 'axios'
 import { useNavigate } from "react-router-dom";
+import { clientInstance } from '../features/sagas/allergySaga';
+
+// const apiUrl = "https://4f4e-185-107-56-83.eu.ngrok.io/"
+
+
+// export let clientInstance = axios.create({
+//     headers: {
+//         "Content-Type": "application/json",
+//         "ngrok-skip-browser-warning": "true",
+//         "Access-Control-Allow-Origin": "*",
+//         "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
+//     },
+//     baseURL: apiUrl
+// })
 
 const Register = () => {
-  const url = 'http://127.0.0.1:5000/api/auth'
-  const [user,setUser] = useState({firstname:'', lastname:"",email:'',password:''})
+
+  const [user,setUser] = useState({email:'',password:'',confirmPassword:''})
 
   const navigate = useNavigate()
   const handleSubmit = async(e) => {
     e.preventDefault()
     console.log(user)
     try {
-     await axios.post(`${url}/register`,user);
+     await clientInstance.post(`api/UserRegistration/register`,user);
      navigate('/login')
     } catch (err) {
       alert("Error registering")
@@ -41,16 +55,9 @@ const Register = () => {
         <input
           className="mt-10 p-[12px] rounded-[10px]  focus:outline-blue-600 text-black"
           type="text"
-          id="firstname"
+          id="confirmPassword"
           onChange={handleChange}
           placeholder="first name"
-        />
-         <input
-          className="mt-10 p-[12px] rounded-[10px] focus:outline-blue-600 text-black"
-          type="text"
-          id = "lastname"
-          onChange={handleChange}
-          placeholder="last name"
         />
         <input
           className="mt-10 rounded-[10px] p-[12px] focus:outline-blue-600 text-black"

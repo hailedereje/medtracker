@@ -1,23 +1,33 @@
 import {call,put,takeEvery } from 'redux-saga/effects'
 import axios from 'axios'
 
-const apiUrl = "https://0d6a-185-107-56-46.eu.ngrok.io/"
+const apiUrl = "https://5d8e-185-107-56-83.eu.ngrok.io/"
 
+
+export let clientInstance = axios.create({
+    headers: {
+        "Content-Type": "application/json",
+        "ngrok-skip-browser-warning": "true",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
+    },
+    baseURL: apiUrl
+})
 const getAllegry = async () => {
-    console.log('data')
-   const response = await axios.get(apiUrl + "api/Allergy")
-   console.log("data111",response.data)
-   return response.data
+   const response = await clientInstance.get("api/Allergy")
+   console.log("body",response)
+   
 }
 
 const Addallergy = async (allergy) => {
     console.log("metenal")
-   const response = await axios.post(apiUrl + "api/Allergy",allergy)
+
+   const response = await clientInstance.post(allergy)
    return response.data
 }
 
 const deleteAllerg = async (id) => {
-    const response = await axios.delete(apiUrl+ `delete/${id}`)
+    const response = await clientInstance.delete(`/delete/${id}`)
     return id
 }
 
