@@ -1,5 +1,4 @@
-import React from "react";
-import { useState } from "react";
+import { useState,React } from "react";
 import { FaBookMedical } from "react-icons/fa";
 import {
   AiOutlineDown,

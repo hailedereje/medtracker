@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import {React, useState } from "react";
 import { useDispatch} from "react-redux";
 import { FaApple } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";

@@ -1,5 +1,4 @@
-import React from "react";
-import { useState } from "react";
+import { useState ,React} from "react";
 import { TbSquaresDiagonal } from "react-icons/tb";
 import {
   AiOutlineDown,
