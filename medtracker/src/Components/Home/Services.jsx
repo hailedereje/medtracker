@@ -6,8 +6,8 @@ const Services = () => {
     <div data-testid="services" className="bg-cyan-500 mt-[10rem]">
       <div className="p-20">
         <div className="flex justify-center  gap-20">
-          {services.map((service) => (
-            <div className="font-sans flex flex-col  items-center">
+          {services.map((service,ind) => (
+            <div key = {ind} className="font-sans flex flex-col  items-center">
               <h1 className="text-center mb-5 text-white text-5xl">
                 {service.icon}
               </h1>
