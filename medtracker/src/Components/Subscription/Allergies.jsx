@@ -16,7 +16,7 @@ import { allergies } from "../../features/actions/actions";
 import Allpop from "./Allpop";
 
 export const Allergies = ({ setAlergy }) => {
-  const aleergy = useSelector((state) => state.allergyReducer.allergies);
+  // const aleergy = useSelector((state) => state.allergyReducer.allergies);
   const [show, setShow] = useState(false);
   const dispatch = useDispatch();
 
@@ -59,14 +59,14 @@ export const Allergies = ({ setAlergy }) => {
           </p>
           <MdDelete size={20} className="hover:hidden" />
         </div>
-        {aleergy.map((alergy) => (
+        {/* {aleergy.map((alergy) => (
           <div className="flex justify-between items-center mx-[1rem] hover:bg-black/10 rounded-md cursor-pointer px-2" key={alergy.id}>
             <p className="my-2 px-[1rem] text-black/50">
               {alergy.title}
             </p>
             <MdDelete size={20} className="hover:hidden" />
           </div>
-        ))}
+        ))} */}
       </div>
       <div className={`flex mt-2 ml-4 ${!show && "hidden"}`}>
         <button
