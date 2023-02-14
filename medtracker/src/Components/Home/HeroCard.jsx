@@ -5,7 +5,9 @@ import { ImProfile } from 'react-icons/im'
 
 const HeroCard = () => {
   return (
-    <div className='w-[1200px] p-[5rem] bg-white rounded-md m-auto flex shadow-md mt-[-5rem] z-auto gap-8'>
+    <div 
+    data-testid="hero-card"
+    className='w-[1200px] p-[5rem] bg-white rounded-md m-auto flex shadow-md mt-[-5rem] z-auto gap-8'>
       <div className='100%'>
         <img className = "w-full" src={medcard} alt=''/>
       </div>

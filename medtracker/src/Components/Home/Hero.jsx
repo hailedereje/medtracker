@@ -5,6 +5,7 @@ import hero_image from '../../assets/home/heroimg1.jpg'
 const Hero = () => {
   return (
     <div 
+    data-testid="hero"
     style={{ backgroundImage: `url(${hero_image})` }}
     className="flex justify-center items-center h-[700px] ">
       <div className="w-[1200px] relative flex flex-col justify-start m-auto">

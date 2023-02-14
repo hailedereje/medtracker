@@ -20,7 +20,9 @@ const Subscription = () => {
     const [alergy,setAlergy] = useState(false)
 
   return (
-    <div className='bg-[#daf2f8] flex justify-center items-center py-[2rem]'>
+    <div 
+    data-testid = "subscription"
+    className='bg-[#daf2f8] flex justify-center items-center py-[2rem]'>
         {side && <SidebarAdd side = { side } setSide={setSide}/>}
         {profile && <Popup setProfile={setProfile}/>}
         {view && <ImageViewer  setView = {setView}/>}

@@ -2,7 +2,10 @@ import React from "react";
 import '../../index.css'
 const Order = () => {
   return (
-    <div className="max-w-[1200px] m-auto mt-[5rem] grid md:grid-cols-2 lg:grid-cols-3 gap-20">
+    <div
+    data-testid="order"
+    
+    className="max-w-[1200px] m-auto mt-[5rem] grid md:grid-cols-2 lg:grid-cols-3 gap-20">
       <div className="p-5 flex flex-col justify-center items-center rounded-md  bg-black/80 text-white space-y-4 shadow-lg hover:bg-black/80 hover:text-white">
         <div>icon</div>
         <div className="font-bold text-2xl">

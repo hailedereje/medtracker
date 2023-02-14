@@ -7,7 +7,7 @@ import Order from '../Components/Home/Order'
 
 function Home() {
   return (
-    <div>
+    <div data-testid="home">
       <Hero/>
       <HeroCard/>
       <Order/>

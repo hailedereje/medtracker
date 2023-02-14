@@ -4,7 +4,7 @@ import img2 from "../../assets/business2.png";
 
 function BusinessMiddle() {
   return (
-    <div className="flex text-white bg-[#091D3E] px-10 py-15 my-15">
+    <div data-testid = "bmiddle" className="flex text-white bg-[#091D3E] px-10 py-15 my-15">
       <div className="flex py-20">
         <div className="flex-1">
           <p>
