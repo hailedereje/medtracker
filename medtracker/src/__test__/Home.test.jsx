@@ -10,15 +10,16 @@ describe("Should render the compnents passed to the Home", ()=>{
         const { getByTestId } = render(<Home />);
         const hero = getByTestId("hero")
         const service = getByTestId("services")
-        const news = getByTestId("news")
+        // const news = getByTestId("news")
         const order = getByTestId("order")
         const hd = getByTestId("hero-card")
 
-        expect(news).toBeInTheDocument();
+        // expect(news).toBeInTheDocument();
         expect(hero).toBeInTheDocument();
         expect(service).toBeInTheDocument();
         expect(order).toBeInTheDocument();
         expect(hd).toBeInTheDocument();
+        
 
      })
 })

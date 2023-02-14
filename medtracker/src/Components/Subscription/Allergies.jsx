@@ -24,7 +24,7 @@ export const Allergies = ({ setAlergy }) => {
     dispatch(allergies());
   });
   return (
-    <div className={`bg-white p-[10px] rounded-[20px] cursor-pointer`}>
+    <div data-testid="allergy" className={`bg-white p-[10px] rounded-[20px] cursor-pointer`}>
       <div
         className="flex p-[10px] justify-between"
         onClick={() => setShow(!show)}
