@@ -12,8 +12,8 @@ const News = () => {
             <h1 className='text-4xl'>Latest News & Articles</h1>
         </div>
         <div className='grid grid-cols-3 gap-10'>
-            {news.map((nw,indx) => (
-                <div key={indx}>
+            {news.map((nw) => (
+                <div key={nw.title}>
                     <img className='h-[40vh] object-cover rounded-bl-[3rem] rounded-tr-[3rem]' src={nw.image} alt=""/>
                     <h1 className='text-center text-xl mt-4 text-cyan-700'>{nw.title}</h1>
                     <p className='text-center text-[15px] mt-3'>Read More  </p>

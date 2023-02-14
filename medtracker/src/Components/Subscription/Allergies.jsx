@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FaAllergies } from "react-icons/fa";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
 import {
   AiOutlineDown,
@@ -13,7 +13,7 @@ import { HiShare } from "react-icons/hi";
 import { MdDelete } from "react-icons/md";
 import { useEffect } from "react";
 import { allergies } from "../../features/actions/actions";
-import Allpop from "./Allpop";
+
 
 export const Allergies = ({ setAlergy }) => {
   // const aleergy = useSelector((state) => state.allergyReducer.allergies);
