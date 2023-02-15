@@ -1,4 +1,3 @@
-import { allergies } from '../actions/actions';
 import * as type from '../types';
 
 const initialState = {
@@ -34,7 +33,7 @@ export default function allergyReducer(state = initialState, action){
                 }
      
             case type.ADD_ALLERGIES_SUCCESS:
-                return [...state.allergies, action.allergy]
+                return {...state.allergies, action:action.allergy}
                     
             case type.DELETE_ALLERGIES_SUCCESS:
                 console.log(action.id)

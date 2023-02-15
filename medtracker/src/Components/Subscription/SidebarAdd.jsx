@@ -1,13 +1,11 @@
-import React from "react";
+import {React,useState} from "react";
 import "../../index.css";
 import { BiArrowBack } from "react-icons/bi";
-import { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch} from "react-redux";
 import { createDocument } from "../../features/actions/actions";
 
 const SidebarAdd = ({ side, setSide }) => {
   const [document, setDocument] = useState({ title: "", type: "", desc: "" });
-//   const user = useSelector(state => state.userReduer.user)
   const [file, setFile] = useState();
   const dispatch = useDispatch()
 

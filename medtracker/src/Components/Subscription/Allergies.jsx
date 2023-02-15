@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { FaAllergies } from "react-icons/fa";
 import { useDispatch } from "react-redux";
 
@@ -11,7 +11,6 @@ import {
 import { IoAddSharp } from "react-icons/io5";
 import { HiShare } from "react-icons/hi";
 import { MdDelete } from "react-icons/md";
-import { useEffect } from "react";
 import { allergies } from "../../features/actions/actions";
 
 
@@ -59,14 +58,7 @@ export const Allergies = ({ setAlergy }) => {
           </p>
           <MdDelete size={20} className="hover:hidden" />
         </div>
-        {/* {aleergy.map((alergy) => (
-          <div className="flex justify-between items-center mx-[1rem] hover:bg-black/10 rounded-md cursor-pointer px-2" key={alergy.id}>
-            <p className="my-2 px-[1rem] text-black/50">
-              {alergy.title}
-            </p>
-            <MdDelete size={20} className="hover:hidden" />
-          </div>
-        ))} */}
+        
       </div>
       <div className={`flex mt-2 ml-4 ${!show && "hidden"}`}>
         <button
