@@ -3,13 +3,11 @@ import express from "express";
 import dotenv from "dotenv";
 
 import authenticationRoute from './routes/auth.js'
-// import usersRoutes from './routes/user.js'
 import allergyRoutes from './routes/allergy.js'
 import medicineRoutes from './routes/medicine.js'
 import docsRoutes from './routes/docs.js'
-// import foodsRoutes from './routes/food.js'
-// import roomBookRoutes from './routes/roomBook.js'
-// import foodOrderRoute from './routes/foodOrder.js'
+import usersRoutes from './routes/user.js'
+
 import cors from 'cors';
 import cookieParser from "cookie-parser";
 
@@ -37,13 +35,12 @@ const connetDB = async () =>{
 
 
 
-// Miidlewares
 app.use(cors())
 app.use(express.json());
 app.use(cookieParser());
 
 app.use('/api/auth',authenticationRoute)
-// app.use('/api/users',usersRoutes)
+app.use('/api/users',usersRoutes)
 app.use('/api/allergy',allergyRoutes)
 app.use('/api/medicine',medicineRoutes)
 app.use('/api/documents',docsRoutes)
