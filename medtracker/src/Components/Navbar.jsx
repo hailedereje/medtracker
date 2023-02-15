@@ -14,11 +14,11 @@ const Navbar = () => {
           <img className="w-[10rem]" src={logo} alt="logo" />
         </div>
         <div className="flex ml-[2rem]">
-          {navbar.map((nav,indx) => (
+          {navbar.map((nav) => (
             <Link
               to={nav.link}
               className="ml-[2rem] font-sans-serif text-[15px] font-mono"
-              key={indx}
+              key={nav.link}
             >
               {nav.name}
             </Link>

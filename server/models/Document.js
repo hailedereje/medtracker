@@ -16,4 +16,4 @@ const DocumentSchema = new mongoose.Schema({
   }
 });
 
-export default mongoose.model("Allergy", DocumentSchema);
+export default mongoose.model("Document", DocumentSchema);

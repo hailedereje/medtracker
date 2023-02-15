@@ -1,5 +1,4 @@
-import React from "react";
-import { useState } from "react";
+import { useState,React } from "react";
 import { BsFillFileEarmarkMedicalFill } from "react-icons/bs";
 import {
   AiOutlineDown,

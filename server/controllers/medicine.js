@@ -12,7 +12,7 @@ export const addMedicine = async (req, res)=>{
     }
 }
 
-export const getAllergy = async(req, res) =>{
+export const getMedicine = async(req, res) =>{
     try {
         const meidcines = await Medicine.findById(req.params.id);
         res.status(200).json(meidcines);

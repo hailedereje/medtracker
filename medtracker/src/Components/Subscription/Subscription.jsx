@@ -1,12 +1,10 @@
-import React from "react";
-// import { Link } from 'react-router-dom'
+import { useState,React } from "react";
 import { Allergies } from "./Allergies";
 import Diagnosis from "./Diagnosis";
 import Medicine from "./Medicine";
 import Vaccines from "./Vaccines";
 import Document from "./Document";
 import SidebarAdd from "./SidebarAdd";
-import { useState } from "react";
 import ordercard from "../../assets/order-card.png";
 import Popup from "../Popup";
 import ImageViewer from "./ImageViewer";

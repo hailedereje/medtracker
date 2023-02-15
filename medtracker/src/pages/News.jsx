@@ -7,7 +7,7 @@ function News() {
       {
         <div className="grid md:grid-cols-3 gap-5 m-10 mt-3">
           {news.map((nws, idx) => (
-            <div key={idx} className="rounded-lg shadow-xxl border basis-[30%] flex-wrap box-border border-[#dae4eb] p-3 shadow-xl cursor-pointer">
+            <div key={nws.title} className="rounded-lg shadow-xxl border basis-[30%] flex-wrap box-border border-[#dae4eb] p-3 shadow-xl cursor-pointer">
               <img src={nws.img} className="object-cover" alt="" />
               <h1 className="font-md my-2 text-[#0292b3]">{nws.title}</h1>
               <h1 className="text-[#777] ">{nws.disc}</h1>
