@@ -1,7 +1,5 @@
 import mongoose from "mongoose";
-import express from "express";
 import dotenv from "dotenv";
-
 import authenticationRoute from './routes/auth.js'
 import allergyRoutes from './routes/allergy.js'
 import medicineRoutes from './routes/medicine.js'
@@ -10,11 +8,6 @@ import usersRoutes from './routes/user.js'
 import cookieParser from "cookie-parser";
 
 dotenv.config();
-
-
-
-
-
 const connetDB = async () =>{
     try {
         mongoose.set('strictQuery', false)
