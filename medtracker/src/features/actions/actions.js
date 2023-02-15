@@ -72,14 +72,6 @@ export const deleteDiagnosies = (id) => {
     }
 }
 
-///medicine
-export const medicine = () => {
-    return {
-        type: type.GET_ALLERGIES,
-        val :type.GET_ALLERGIES,
-    }
-}
-
 export const deleteMedicine = (id) => {
     return {
         type: type.GET_ALLERGIES,
@@ -87,13 +79,7 @@ export const deleteMedicine = (id) => {
     }
 }
 
-///vaccine
-export const vaccine = () => {
-    return {
-        type: type.GET_ALLERGIES,
-        val:type.GET_ALLERGIES,
-    }
-}
+
 
 export const deleteVaccine = (id) => {
     return {

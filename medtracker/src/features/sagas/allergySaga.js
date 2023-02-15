@@ -27,7 +27,6 @@ const Addallergy = async (allergy) => {
 }
 
 const deleteAllerg = async (id) => {
-    const response = await clientInstance.delete(`/delete/${id}`)
     return id
 }
 

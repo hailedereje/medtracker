@@ -15,7 +15,6 @@ const addDocument = async (document) => {
 }
 
 const deleteDocument = async (id) => {
-    const response = await axios.delete(apiUrl+ `delete/${id}`)
     return id
 }
 

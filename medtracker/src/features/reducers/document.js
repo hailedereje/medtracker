@@ -25,7 +25,7 @@ export default function documentReducer(state = initialState, action){
             }
 
         case type.ADD_DOCUMENT_SUCCESS:
-            return [...state.document, action.document]
+            return {...state.document, action:action.document}
             
     
         case type.DELETE_DOCUMENT_SUCCESS:
