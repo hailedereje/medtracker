@@ -15,7 +15,6 @@ import { allergies } from "../../features/actions/actions";
 
 
 export const Allergies = ({ setAlergy }) => {
-  // const aleergy = useSelector((state) => state.allergyReducer.allergies);
   const [show, setShow] = useState(false);
   const dispatch = useDispatch();
 
