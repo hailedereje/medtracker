@@ -1,18 +1,14 @@
 import * as type from '../types'
-
-
-
 export const userLogin = (user) => {
     return {
         type:type.USER_LOGIN,
         payload:user
     }
 }
-
-///allergees
 export const allergies = () => {
     return {
         type: type.GET_ALLERGIES,
+        val : type.GET_ALLERGIES,
     }
 }
 
@@ -40,7 +36,8 @@ export const createDocument = ( document ) => {
 
 export const getDocument = () => {
     return {
-        type:type.GET_DOCUMENT
+        type:type.GET_DOCUMENT,
+        val:type.GET_DOCUMENT
     }
 }
 
@@ -64,6 +61,7 @@ export const updateId = (id) => {
 export const diagnosis = () => {
     return {
         type: type.GET_DIAGNOSIS,
+        val:type.GET_DIAGNOSIS,
     }
 }
 
@@ -78,6 +76,7 @@ export const deleteDiagnosies = (id) => {
 export const medicine = () => {
     return {
         type: type.GET_ALLERGIES,
+        val :type.GET_ALLERGIES,
     }
 }
 
@@ -92,6 +91,7 @@ export const deleteMedicine = (id) => {
 export const vaccine = () => {
     return {
         type: type.GET_ALLERGIES,
+        val:type.GET_ALLERGIES,
     }
 }
 

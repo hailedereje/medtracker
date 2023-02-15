@@ -1,5 +1,4 @@
-import React from 'react'
-import { useState } from 'react'
+import {React, useState } from 'react'
 import { BiArrowBack } from 'react-icons/bi'
 import { useDispatch } from 'react-redux'
 import { addAllergies } from '../../features/actions/actions'
