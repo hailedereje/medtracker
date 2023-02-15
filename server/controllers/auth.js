@@ -1,60 +1,56 @@
-import User from "../models/User.js"
+import User from "../models/User.js";
 
-import cryptojs from 'crypto-js';
+import cryptojs from "crypto-js";
 
-import Jwt  from "jsonwebtoken";
-export const registerUser = async(req, res) =>{
+import Jwt from "jsonwebtoken";
+export const registerUser = async (req, res) => {
+  const hashPassword = cryptojs.AES.encrypt(
+    req.body.password,
+    process.env.PASS
+  ).toString();
 
-    const hashPassword = cryptojs.AES.encrypt(req.body.password, process.env.PASS).toString();
+  const newUser = User({
+    firstname: req.body.firstname,
+    email: req.body.email,
+    password: hashPassword,
+  });
+  try {
+    const user = await newUser.save();
+    res.status(201).json(user);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+};
 
-    const newUser = User({
+export const loginUser = async (req, res) => {
+  try {
+    const user = await User.findOne({ email: req.body.email });
+    !user && res.status(500).json("Invalid credentials");
+    const hashedPassword = cryptojs.AES.decrypt(
+      user.password,
+      process.env.PASS
+    );
 
-        firstname:  req.body.firstname,
-        email:     req.body.email,
-        password:  hashPassword
+    const userPassword = hashedPassword.toString(cryptojs.enc.Utf8);
 
-    })
-    try {
-    const user = await newUser.save()
-    res.status(201).json(user)
-    } catch (err) {
-        res.status(500).json(err)
-
+    if (userPassword !== req.body.password) {
+      return res.status(401).json("Wrong credentials");
     }
 
-}
+    const accessToken = Jwt.sign(
+      {
+        id: user._id,
+        isAdmin: user.isAdmin,
+      },
 
-export const loginUser = async (req, res)=>{
-    try {
-        const user = await User.findOne({email:req.body.email});
-        !user && res.status(500).json("Invalid credentials");
-        const hashedPassword = cryptojs.AES.decrypt(user.password,
-            process.env.PASS
-            )
+      process.env.JWT,
 
-        const userPassword = hashedPassword.toString(cryptojs.enc.Utf8)
+      { expiresIn: "2d" }
+    );
+    const { password, ...otherInfo } = user._doc;
 
-
-        if (userPassword !== req.body.password){ 
-        return res.status(401).json("Wrong credentials")
-        }
-
-        const accessToken = Jwt.sign({
-            id: user._id,
-            isAdmin: user.isAdmin
-
-        },
-
-        process.env.JWT,
-
-        {expiresIn:"2d"}
-
-        );
-        const {password, ...otherInfo} = user._doc
-        
-        res.status(200).json({...otherInfo, accessToken});
-
-    } catch (err) {
-        res.status(500).json(err)
-    }
-}
+    res.status(200).json({ ...otherInfo, accessToken });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+};
