@@ -15,7 +15,7 @@ export default function userReducer(state=initailState, action){
         case type.CREATE_USER_SUCCESS:
             localStorage.setItem('addis',JSON.stringify(action.user))
             return {
-                ...state,user:action.user,
+                user:action.user,
                 success:true
             }
             case type.LOGIN_SUCCESS:

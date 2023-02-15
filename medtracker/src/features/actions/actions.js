@@ -57,7 +57,7 @@ export const updateId = (id) => {
     }
 }
 
-//// diagnosos
+
 export const diagnosis = () => {
     return {
         type: type.GET_DIAGNOSIS,
@@ -74,7 +74,6 @@ export const deleteDiagnosies = (id) => {
 
 export const deleteMedicine = (id) => {
     return {
-        type: type.GET_ALLERGIES,
         payload:id
     }
 }
