@@ -7,8 +7,6 @@ import allergyRoutes from './routes/allergy.js'
 import medicineRoutes from './routes/medicine.js'
 import docsRoutes from './routes/docs.js'
 import usersRoutes from './routes/user.js'
-
-import cors from 'cors';
 import cookieParser from "cookie-parser";
 
 dotenv.config();
