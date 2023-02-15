@@ -13,25 +13,4 @@ export const registerUser = async (req, res, next) => {
     next(err);
   }
 };
-export const loginUser = async (req, res, next) => {
-  try {
-    const user = await User.findOne({ email: req.body.email });
-    if (!user)
-      return next(handleError({ status: 404, message: "user not found" }));
-    const isCorrect = await bcrypt.compare(req.body.password, user.password);
-    if (!isCorrect)
-      return next(
-        handleError({ status: 400, message: "Incorrect email or password!" })
-      );
-    const token = jwt.sign({ id: user._id }, process.env.JWT);
-    const { password, ...noPassword } = user._doc;
-    res
-      .cookie("accessToken", token, {
-        httpOnly: true,
-      })
-      .status(200)
-      .json(noPassword);
-  } catch (err) {
-    next(err);
-  }
-};
+
