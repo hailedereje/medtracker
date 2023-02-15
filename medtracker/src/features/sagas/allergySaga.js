@@ -14,7 +14,7 @@ export let clientInstance = axios.create({
     baseURL: apiUrl
 })
 const getAllegry = async () => {
-   const response = await clientInstance.get("api/Allergy")
+   const response = await clientInstance.get("api/allergy")
    console.log("body",response)
    
 }

@@ -5,22 +5,10 @@ import axios from 'axios'
 import { useNavigate } from "react-router-dom";
 import { clientInstance } from '../features/sagas/allergySaga';
 
-// const apiUrl = "https://4f4e-185-107-56-83.eu.ngrok.io/"
-
-
-// export let clientInstance = axios.create({
-//     headers: {
-//         "Content-Type": "application/json",
-//         "ngrok-skip-browser-warning": "true",
-//         "Access-Control-Allow-Origin": "*",
-//         "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
-//     },
-//     baseURL: apiUrl
-// })
 
 const Register = () => {
 
-  const [user,setUser] = useState({email:'',password:'',confirmPassword:''})
+  const [user,setUser] = useState({firstname:'',email:'',password:''})
 
   const navigate = useNavigate()
   const handleSubmit = async(e) => {

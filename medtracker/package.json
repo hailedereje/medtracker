@@ -1,10 +1,7 @@
 {
   "name": "medtracker",
   "version": "0.1.0",
-<<<<<<< HEAD
   "proxy": "http://localhost:3000",
-=======
->>>>>>> 09410b93a21a323cdcdf94fbe51923ce6fdea356
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.2",
